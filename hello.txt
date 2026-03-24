@@ -1,1 +1,12 @@
-hello
+1st command :-!pip install firebase-admin
+2nd command:-
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+cred = credentials.Certificate("ServiceAccountKey.json")
+firebase_admin.initialize_app(cred,{"databaseURL":"https://new-project-165d0-default-rtdb.asia-southeast1.firebasedatabase.app/"})
+
+ref = db.reference("input")
+ref.push({"value":75})
+print("Sample data sent to firebase")
+
